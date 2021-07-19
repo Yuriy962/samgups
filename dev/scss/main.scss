@@ -1,0 +1,36 @@
+@function max($numbers...) {
+    @return m#{a}x(#{$numbers});
+}
+
+@function min($numbers...) {
+    @return m#{i}n(#{$numbers});
+}
+
+* {
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Manrope', sans-serif;
+    font-weight: 400;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0;
+}
+
+
+@import "./bootstrap";
+@import '../../node_modules/@fancyapps/fancybox/dist/jquery.fancybox';
+
+
+@media (min-width: 1200px){
+    .container{
+        max-width: 1560px;
+    }
+}
