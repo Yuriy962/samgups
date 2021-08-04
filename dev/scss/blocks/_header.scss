@@ -1,0 +1,165 @@
+.page{
+    position: relative;
+    &-header{
+        position: relative;
+        z-index: 10;
+        &__inner{
+            max-height: 114px;
+            background-color: #fff;
+        }
+        &__logo{
+            max-width: 255px;
+            max-height: 96px;
+            img{
+                width: 100%;
+            }
+        }
+        .menu__list{
+            &--sub{
+                background-color: #fff;
+                align-items: flex-start;
+                padding: 25px 20px 20px 30px;
+            }
+        }
+        .menu__item{
+            font-size: 16px;
+            &:not(.menu__item--sub){
+                height: 114px;
+            }
+        }
+
+        .phone{
+            &__link{
+                margin-right: 40px;
+            }
+        }
+    }
+}
+@media (max-width: 1560px){
+    .page{
+        &-header{
+            &__inner{
+                max-height: 96px;
+            }
+            &__logo{
+                max-width: 200px;
+                max-height: 75px;
+            }
+            .phone{
+                &__link{
+                    font-size: 18px;
+                    margin-right: 10px;
+                }
+            }
+            .menu{
+                &__item{
+                    font-size: 13px;
+                    &:not(.menu__item--sub){
+                        height: 96px;
+                    }
+                }
+            }
+
+            .search{
+                &__icon{
+                    width: 30px;
+                    height: 30px;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 1200px){
+    .page{
+        &-header{
+            &__logo{
+                max-width: 180px;
+                max-height: 68px;
+            }
+            .menu{
+                &__item{
+                    font-size: 11px;
+                    &:not(.menu__item--sub){
+                        height: 80px;
+                    }
+                }
+            }
+            .phone{
+                &__link{
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 992px){
+    .page{
+        &-header{
+            height: 73px;
+            &__logo{
+                max-width: 182px;
+                max-height: 69px;
+            }
+
+           &__phone{
+                width: 100%;
+                background-color: #1C2744;
+                text-align: center;
+                padding: 20px;
+                margin-bottom: 20px;
+            }
+            .phone__link{
+                color: #fff;
+                font-size: 21px;
+                margin: 0;
+                letter-spacing: 0.06em;
+            }
+
+            .menu{
+                &__list{
+                    flex-direction: column;
+                    align-items: flex-start;
+                    padding: 0;
+                    &--sub{
+                        position: relative;
+                        left: 0;
+                        right: 0;
+                        top: 0;
+                        bottom: 0;
+                        background-color: transparent;
+                        box-shadow: none;
+                    }
+                    &--mobile{
+                        padding: 0 20px;
+                    }
+
+                    &--sub{
+                        .menu__item--sub{
+                            font-size: 15px;
+                        }
+                    }
+                }
+                &__item{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    font-size: 16px;
+                    width: 100%;
+                    line-height: 30px;
+                    color: #fff;
+                    .menu__list--sub{
+                        padding: 0;
+                        opacity: 1;
+                    }
+                    &:not(.menu__item--sub){
+                        height: auto;
+                        margin: 10px 0;
+                    }
+                }
+                &__link{
+                    color: #fff;
+                }
+            }
+        }
+    }
+}

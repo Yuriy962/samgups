@@ -7,22 +7,120 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/all.min.css">
     <title>Document</title>
 </head>
 
 <body class="page">
-
     <header class="page-header">
-        <div class="container">
-            <div class="row">
-               <div class="col-4">jklbj</div>
-               <div class="col-4">jklbj</div>
-               <div class="col-4">jklbj</div>
+        <div class="page-header__inner position-fixed w-100">
+            <div class="container">
+                <div class="row align-items-center justify-content-between flex-nowrap d-none d-lg-flex">
+                    <div class="logo page-header__logo">
+                        <img src="img/header/logo.png" alt="logo">
+                    </div>
+                    <nav class="menu col-lg-7 p-0">
+                        <ul class="menu__list">
+                            <li class="menu__item">
+                                <a href="#" class="menu__link">Направления обучения</a>
+                            </li>
+                            <li class="menu__item menu__item--active">
+                                <a href="#" class="menu__link">Об институте</a>
+                                <ul class="menu__list menu__list--sub">
+                                    <li class="menu__item menu__item--sub"><a href="#" class="menu__link">О нас</a></li>
+                                    <li class="menu__item menu__item--sub"><a href="#" class="menu__link">Документация</a></li>
+                                    <li class="menu__item menu__item--sub"><a href="#" class="menu__link">Образцы выдаваемых документов</a></li>
+                                    <li class="menu__item--sub"><a href="#" class="menu__link">Партнеры</a></li>
+                                </ul>
+                            </li>
+                            <li class="menu__item">
+                                <a href="#" class="menu__link">Портал дистанционного обучения</a>
+                            </li>
+                            <li class="menu__item">
+                                <a href="#" class="menu__link">Контакты</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <div class="page--header__info d-flex">
+                        <div class="phone page-header__phone">
+                            <a href="tel:88007752325" class="phone__link">8-800-775-23-25</a>
+                        </div>
+                        <div class="search page-header__search">
+                            <div class="search__icon"></div>
+                            <div class="search__input">
+                                <input class="d-none" type="search" name="search" id="search">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="d-flex justify-content-between align-items-center d-lg-none">
+                    <div class="logo page-header__logo">
+                        <img src="img/header/logo.png" alt="logo">
+                    </div>
+                    <div class="menu menu--mobile">
+                        <div class="phone page-header__phone">
+                            <a href="tel:88007752325" class="phone__link">8-800-775-23-25</a>
+                        </div>
+                        <ul class="menu__list menu__list--mobile">
+                            <li class="menu__item">
+                                <a href="" class="menu__link">
+                                    Направления обучения
+                                </a>
+                            </li>
+                            <li class="menu__item">
+                                <a href="" class="menu__link">
+                                    Об институте
+                                </a>
+                            </li>
+                            <li class="menu__item">
+                                <a href="" class="menu__link">
+                                    Портал дистанционного обучения
+                                </a>
+                                <ul class="menu__item menu__list--sub">
+                                    <li class="menu__item menu__item--sub">
+                                        <a href="" class="menu__link">О нас</a>
+                                    </li>
+                                    <li class="menu__item menu__item--sub">
+                                        <a href="" class="menu__link">Документация</a>
+                                    </li>
+                                    <li class="menu__item menu__item--sub">
+                                        <a href="" class="menu__link">Образцы выдаваемых документов</a>
+                                    </li>
+                                    <li class="menu__item menu__item--sub">
+                                        <a href="" class="menu__link">Партнёры</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="menu__item">
+                                <a href="" class="menu__link">
+                                    Контакты
+                                </a>
+                            </li>
+                            <li class="menu__item">
+                                <a href="" class="menu__link">
+                                    Онлайн заявка на обучения
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="page--header__info d-flex">
+                        <div class="search page-header__search">
+                            <div class="search__icon"></div>
+                            <div class="search__input">
+                                <input class="d-none" type="search" name="search" id="search">
+                            </div>
+                        </div>
+                        <div class="burger">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </div>
+                </div>
             </div>
+
         </div>
     </header>
-
     <main>

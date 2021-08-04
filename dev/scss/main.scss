@@ -6,12 +6,16 @@
     @return m#{i}n(#{$numbers});
 }
 
+$text-color: #253150;
+
 * {
     box-sizing: border-box;
 }
 body{
     font-family: 'Manrope', sans-serif;
     font-weight: 400;
+    background-color: #E5E5E5;
+    color: $text-color;
 }
 
 h1,
@@ -24,13 +28,173 @@ p {
     margin: 0;
 }
 
+.search{
+    &__icon{
+        width: 40px;
+        height: 40px;
+        background: $text-color;
+        border-radius: 2px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &::before{
+            content: url('../icons/loupe.svg');
+            width: 24px;
+            height: 24px;
+        }
+        &:hover{
+            background-color: #5A7FDD;
+        }
+        @media (max-width: 992px){
+            margin-right: 20px;
+        }
+    }
+}
+
+main{
+    height: 100vh;
+    background-color: #000;
+}
 
 @import "./bootstrap";
 @import '../../node_modules/@fancyapps/fancybox/dist/jquery.fancybox';
 
-
-@media (min-width: 1200px){
+@media (min-width: 1560px){
     .container{
         max-width: 1560px;
+    }
+}
+
+a{
+    color: $text-color;
+    font-weight: normal;
+    &:hover{
+        text-decoration: none;
+    }
+}
+
+.phone{
+    &__link{
+        font-size: 21px;
+        font-weight: 600;
+    }
+}
+
+.burger{
+    display: block;
+    width: 33px;
+    height: 28px;
+    span{
+        display: block;
+        height: 4px;
+        width: 100%;
+        background-color: $text-color;
+        margin-bottom: 8px;
+        transition: all .5s;
+    }
+    &--active{
+        span{
+            &:first-child {
+                transform: translateY(13px) rotate(-45deg);
+            } 
+            &:nth-child(2) {
+                display: none;
+            }
+            &:last-child {
+                transform: translateY(1px) rotate(45deg);
+            }
+        }
+    }
+    @media (min-width: 992px){
+        display: none;
+    }
+}
+
+
+.menu{
+    &__list{
+        display: flex;
+        list-style: none;
+        position: relative;
+        padding-left: 0;
+        margin: 0;
+        justify-content: space-between;
+        transition: all 0.3s;
+        &--sub{
+            position: absolute;
+            flex-direction: column;
+            z-index: 1;
+            bottom: -140px;
+            left: 0;
+            min-width: 362px;
+            opacity: 0;
+            box-shadow: 5px 5px 10px rgba(157, 165, 173, 0.2);
+            @media (max-width: 1560px){
+                bottom: -121px;
+            }
+            @media (max-width: 1200px){
+                bottom: -109px;
+            }
+        }
+    }
+    &__item{
+        font-family: 'Manrope', sans-serif;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        &--sub{
+            text-transform: none;
+            &:before{
+                content: none;
+            }
+        }
+        &:before{
+            content: '';
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 5px;
+        }
+        &--active{
+            left: 0;
+            .menu--mobile{
+                left: 0;
+            }
+            &:before{
+                background-color: #2656D3;
+            }
+        }
+    }
+    &--mobile{
+        transition: left 0.3s;
+        position: absolute;
+        height: 100vh;
+        left: -100%;
+        top: 72px;
+        bottom: 0;
+        width: 100%;
+        background-color: $text-color;
+    }
+    &--mobile.menu--active{
+        left: 0;
+    }
+}
+.site-author{
+    text-decoration: underline;
+}
+
+@import 'blocks/header';
+@import 'mainpage/promo';
+
+@import 'blocks/footer';
+.no-pseudo{
+    &:before{
+        content: none;
+    }
+    &:after{
+        content: none;
     }
 }
