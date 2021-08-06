@@ -64,7 +64,7 @@ p {
 }
 
 main{
-    min-height: 100vh;
+    min-height: 80vh;
     padding-top: 114px;
     @media (max-width: 1560px) {
         padding-top: 97px;
@@ -408,6 +408,7 @@ a{
 @import 'blocks/header';
 @import 'mainpage/promo';
 @import 'mainpage/directions';
+@import 'documents/documents';
 @import 'contacts/contacts';
 
 
