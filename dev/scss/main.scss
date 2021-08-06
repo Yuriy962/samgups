@@ -41,6 +41,7 @@ p {
 
 .search{
     &__icon{
+        cursor: pointer;
         width: 40px;
         height: 40px;
         background: $text-color;
