@@ -10,7 +10,6 @@ $(window).on('load', function () {
     });
     menuItem.forEach(item => {
         item.addEventListener('click', (e) => {
-            e.preventDefault();
             hamburger.classList.toggle('burger--active');
             sidebar.classList.toggle('menu--mobile');
         })
@@ -69,4 +68,18 @@ $(window).on('load', function () {
     }
     );
 
+    //map
+    YaMapsShown = false; 
+    $(window).scroll(function() {
+        if (!YaMapsShown){     
+            showYaMaps();   
+            YaMapsShown = true;
+        }
+    });
+    function showYaMaps(){
+        var script   = document.createElement("script");
+        script.type  = "text/javascript";
+        script.src   = "https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A7d756685574180ab33deecba9327360b2f018aa59415ab87ce71a2310d56e6ec&amp;width=100%25&amp;height=712&amp;lang=ru_RU&amp;scroll=true";
+        document.getElementById("YaMaps").appendChild(script);
+    }
 });
