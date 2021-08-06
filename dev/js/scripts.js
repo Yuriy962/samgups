@@ -56,7 +56,16 @@ $(window).on('load', function () {
                 '<path d="M1 1L11 11L1 21" class="slick-arrow-blue" stroke-width="2" stroke-linecap="round"/>' +
             '</svg>'+
         '</button>',
-        fade: true
+        fade: true,
+        responsive: [
+            {
+                 breakpoint: 992,
+                 settings: {
+                    arrows: false,
+                    dots: true
+                 }
+            }
+        ]
     }
     );
 
