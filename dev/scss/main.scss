@@ -13,13 +13,6 @@ $accent: #2656D3;
 * {
     box-sizing: border-box;
 }
-body{
-    font-family: 'Manrope', sans-serif;
-    font-weight: 400;
-    background-color: #E5E5E5;
-    color: $text-color;
-}
-
 input,
 button{
     &:active,
@@ -262,7 +255,7 @@ a{
             width: 100%;
             height: 5px;
         }
-        &--active{
+        &--active:not(.menu__item--sub) {
             left: 0;
             .menu--mobile{
                 left: 0;
@@ -409,6 +402,7 @@ a{
 @import 'mainpage/promo';
 @import 'mainpage/directions';
 @import 'documents/documents';
+@import 'partners/partners';
 @import 'contacts/contacts';
 
 
@@ -420,4 +414,10 @@ a{
     &:after{
         content: none;
     }
+}
+body {
+    font-family: 'Manrope', sans-serif;
+    font-weight: 400;
+    background-color: #E5E5E5;
+    color: $text-color;
 }

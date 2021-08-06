@@ -17,11 +17,12 @@ $(window).on('load', function () {
 
     //footer menu
     if($(window).width() > 992){
-        $('.menu__item').on('mouseover',function () {
+        $('.menu__item').on('mouseover',function (e) {
             let item = $(this);
             item.addClass('menu__item--active');
             let submenu = $(this).find('.menu__list--sub');
             if(submenu){
+                e.preventDefault();
                 submenu.css({'opacity' : '1'});
             }
         }).on('mouseout', function (){
