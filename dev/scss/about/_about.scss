@@ -1,0 +1,98 @@
+.about{
+    p{
+        margin-bottom: 30px;
+        font-size: 18px;
+    }
+    &__inner{
+        margin: 60px 0 100px;
+    }
+    &__block{
+        margin: 30px 0 50px;
+        position: relative;
+    }
+    &__list{
+        padding-left: 20px;
+        padding-right: 60px;
+    }
+    &__item{
+        padding: 30px 0;
+        padding-left: 24px;
+        border-bottom: 1px solid #D3D3D3;
+        position: relative;
+        &:last-child{
+            border: none;
+        }
+        &::marker{
+            position: absolute;
+            top: 0;
+            left: -24px;
+            font-size: 24px;
+            font-weight: 600;
+            color: $accent;
+        }
+    }
+    &__invite{
+        height: 592px;
+        width: 594px;
+        padding: 45px 60px 68px;
+        background-color: #fff;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        img{
+            max-width: 360px;
+            max-height: 298px;
+            width: 100%;
+        }
+        &--inner{
+            margin-top: 20px;
+            .title{
+                margin-bottom: 25px;
+            }
+            p{
+              font-size: 18px;
+            }
+        }
+    }
+    @media (max-width: 992px){
+        p{
+            font-size: 16px;
+        }
+        &__inner{
+            margin: 20px 0 45px;
+        }
+        &__list{
+            padding-right: 0;
+        }
+        &__item {
+            padding-left: 12px;
+            font-size: 15px;
+
+            &::marker {
+                font-size: 18px;
+            }
+        }
+
+        &__invite {
+            padding: 30px 20px;
+            position: relative;
+            .title{
+                font-size: 22px;
+            }
+            p{
+                font-size: 16px;
+            }
+        }
+    }
+}
+
+.small-text{
+    p{
+        font-size: 16px;
+    }
+    @media (max-width: 992px) {
+        p {
+            font-size: 15px;
+        }
+    }
+}

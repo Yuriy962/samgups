@@ -400,6 +400,7 @@ a{
 @import '../../node_modules/@fancyapps/fancybox/dist/jquery.fancybox';
 @import 'blocks/header';
 @import 'mainpage/promo';
+@import 'about/about';
 @import 'mainpage/directions';
 @import 'documents/documents';
 @import 'partners/partners';
@@ -418,6 +419,6 @@ a{
 body {
     font-family: 'Manrope', sans-serif;
     font-weight: 400;
-    background-color: #E5E5E5;
     color: $text-color;
+    background-color: #E5E5E5;
 }
