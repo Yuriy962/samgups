@@ -52,8 +52,8 @@ p {
 }
 
 main{
-    height: 100vh;
-    background-color: #000;
+    min-height: 100vh;
+    padding-top: 114px;
 }
 
 @import "./bootstrap";
@@ -186,6 +186,41 @@ a{
     text-decoration: underline;
 }
 
+
+.slick{
+    &-arrow{
+        position: absolute;
+        z-index: 1;
+        bottom: 0;
+        left: 0;
+        height: 70px;
+        width: 80px;
+        border: none;
+        background: #FFFFFF;
+        box-shadow: 5px 5px 10px rgba(157, 165, 173, 0.2);
+        &-blue{
+            stroke: #2656D3;
+        }
+        &:hover{
+            .slick-arrow-blue{
+                stroke: #A7BFFF;
+            }
+        }
+        &:focus,
+        &:active{
+            outline: none;
+        }
+    }
+    &-prev{
+        left: 0;
+    }
+    &-next{
+        left: 80px;
+    }
+}
+
+@import "../../node_modules/slick-carousel/slick/slick.scss";
+@import '../../node_modules/@fancyapps/fancybox/dist/jquery.fancybox';
 @import 'blocks/header';
 @import 'mainpage/promo';
 

@@ -1,5 +1,5 @@
 $(window).on('load', function () {  
-
+    //mobile-menu
     const sidebar = document.querySelector('.menu--mobile'),
     menuItem = document.querySelectorAll('.menu li a'),
     hamburger = document.querySelector('.burger');
@@ -16,6 +16,7 @@ $(window).on('load', function () {
         })
     });
 
+    //footer menu
     if($(window).width() > 992){
         $('.menu__item').on('mouseover',function () {
             let item = $(this);
@@ -38,4 +39,25 @@ $(window).on('load', function () {
             }
         });
     }
+
+
+    //sliders
+    $('.promo-slider').slick({
+        arrows: true,
+        prevArrow: 
+        '<button type="button" class="slick-arrow slick-prev">' +
+            '<svg width="13" height="22" viewBox="0 0 13 22" fill="none" xmlns="http://www.w3.org/2000/svg">' +
+                '<path d="M12 21L2 11L12 1" class="slick-arrow-blue" stroke-width="2" stroke-linecap="round"/>' +
+            '</svg>' +
+        '</button>',
+        nextArrow: 
+        '<button type="button" class="slick-arrow slick-next">' +
+            '<svg width="13" height="22" viewBox="0 0 13 22" fill="none" xmlns="http://www.w3.org/2000/svg">' +
+                '<path d="M1 1L11 11L1 21" class="slick-arrow-blue" stroke-width="2" stroke-linecap="round"/>' +
+            '</svg>'+
+        '</button>',
+        fade: true
+    }
+    );
+
 });
